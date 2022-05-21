@@ -1,0 +1,21 @@
+{
+  "chains": [
+    {
+      "name": "sub",
+      "type": "substrate",
+      "id": "1",
+      "endpoint": "ws://localhost:9944",
+      "from": "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY",
+      "opts": {
+	  "useExtendedCall":"true"
+      }
+    },
+    {
+      "name": "btg",
+      "type": "bitcoingold",
+      "id": "2",
+      "endpoint": "localhost:8332",
+      "from": "btg1qmc6uua0jngs9qr38w3pchcvdcrzu878t8p8nwqtj32rtjvjfvnfqywt5pr"
+    }
+  ]
+}

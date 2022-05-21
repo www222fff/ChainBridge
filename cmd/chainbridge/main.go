@@ -25,6 +25,7 @@ import (
 	log "github.com/ChainSafe/log15"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/urfave/cli/v2"
+	"github.com/www222fff/watchUTXO/chains/bitcoingold"
 )
 
 var app = cli.NewApp()
@@ -199,6 +200,8 @@ func run(ctx *cli.Context) error {
 			newChain, err = ethereum.InitializeChain(chainConfig, logger, sysErr, m)
 		} else if chain.Type == "substrate" {
 			newChain, err = substrate.InitializeChain(chainConfig, logger, sysErr, m)
+		} else if chain.Type == "bitcoingold" {
+			newChain, err = bitcoingold.InitializeChain(chainConfig, logger, sysErr, m)
 		} else {
 			return errors.New("unrecognized Chain Type")
 		}
